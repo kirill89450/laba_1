@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 #include <fstream>
 using namespace std;
-
 int chetchik();
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -24,10 +24,28 @@ int main()
 	}
 
 	f.close();
+	int temp;
+	for (int i = 0; i < num - 1; i++)
+	{
+		for (int j = 0; j < num - i - 1; j++)
+		{
+			if (mass[j] > mass[j + 1])
+			{
+				// меняем элементы местами
+				temp = mass[j];
+				mass[j] = mass[j + 1];
+				mass[j + 1] = temp;
+			}
+		}
+	}
 	for (int i = 0; i < num; i++) { cout << mass[i] << " "; }
 
-	delete[] mass;	return 0;
+	delete[] mass;	
+	
+	
+	return 0;
 }
+
 
 int chetchik()
 {

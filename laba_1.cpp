@@ -46,9 +46,9 @@ int main()
 	cout <<endl<< "Введите кольво чисел в новом массиве: ";
 	cin >> col;
 	int aa, bb;
-	cout << endl << "Введите диапозон:";
+	cout << endl << "Введите диапозон от ";
 	cin >> aa;
-	cin >> bb;
+	cout << "до  ";	cin >> bb;
 	int* mass2 = new int[col];
 	int numb;
 	for (int i = 0; i < col; i++)
@@ -60,6 +60,22 @@ int main()
 	for (int i = 0; i < col; i++) { cout << mass2[i] << " "; }
 	cout << endl;
 	delete[]mass2;
+
+	int* mass3 = new int[col];
+	int avs;
+	for(int i=0;i<col;i++)
+		if (mass2[i] % 2 == 0)
+		{
+			mass3[i] = mass2[i];
+			avs++;
+		}
+	for (int i = 0; i < avs; i++) 
+	{
+		cout << mass3[i] << " "; 
+	}
+	cout << endl;
+	delete[]mass3;
+
 
 
 	return 0;

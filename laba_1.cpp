@@ -3,18 +3,33 @@
 #include <fstream>
 using namespace std;
 
-int mass_in_file();
+
 int chetchik();
 int main()
 
 {
 	setlocale(LC_ALL, "Russian");
+	int num = chetchik();
+	int* mass = new int[num];
+	int a;
+	ifstream f;
+	f.open("123.txt");
+	while (!f.eof())
+	{
+		f >> a;
+		if (a % 2 == 0)
+		{
+			int i=0;
+			mass[i] = a;
+			i++;
+		}
 
-	int* mass = new int[chetchik()];
-	cout << chetchik();
-
-
-
+	}
+	int s;
+	for (s = 0; s < num; s++)
+	{
+		cout << mass[s];
+	}
 
 
 
@@ -39,11 +54,6 @@ int chetchik()
 			num++;
 
 	}
+	f.close();
 	return num;
-}
-
-int mass_in_file()
-{
-
-	return 0;
 }

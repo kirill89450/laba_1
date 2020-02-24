@@ -42,7 +42,26 @@ int main()
 
 	delete[] mass;	
 	
-	
+	int col;
+	cout <<endl<< "Введите кольво чисел в новом массиве: ";
+	cin >> col;
+	int aa, bb;
+	cout << endl << "Введите диапозон:";
+	cin >> aa;
+	cin >> bb;
+	int* mass2 = new int[col];
+	int numb;
+	for (int i = 0; i < col; i++)
+	{
+		numb = rand() % bb + aa;
+		mass2[i] = numb;
+		
+	}
+	for (int i = 0; i < col; i++) { cout << mass2[i] << " "; }
+	cout << endl;
+	delete[]mass2;
+
+
 	return 0;
 }
 
@@ -61,6 +80,6 @@ int chetchik()
 			num++;
 	}
 	f.close();
-	cout << "размер " << num << endl;
+	cout << "Колличество элементов массива =  " << num << endl;
 	return num;
 }

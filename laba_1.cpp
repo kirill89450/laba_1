@@ -11,6 +11,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 
 	int* mass = new int[chetchik()];
+	cout << chetchik();
 
 
 
@@ -44,5 +45,5 @@ int chetchik()
 int mass_in_file()
 {
 
-
+	return 0;
 }
